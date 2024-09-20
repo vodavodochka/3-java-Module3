@@ -18,8 +18,15 @@ public class Task09Main {
     }
 
     static int min(int[] arr) {
-        IntStream a = Arrays.stream(arr).sorted();
-        return a.findFirst().getAsInt();
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++)
+        {
+            if (arr[i] < min)
+            {
+                min = arr[i];
+            }
+        }
+        return min;
     }
 
 }
